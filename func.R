@@ -34,5 +34,5 @@ compare <- function(dataset, label, level1, level2) {
   
 }
 
-linkervscore <- compare(HistSubtype, "LinkerMut", "CoreMut")
+linkervscore <- compare(Drugresponse_DepMapID_HistSubtype_SampleInfo, HistSubtype, "LinkerMut", "CoreMut")
 
