@@ -32,12 +32,13 @@ compare <- function(dataset, label, level1, level2) {
       results[nrow(results) + 1,] = c(drug, test$p.value)
       
     }
+    
   }
   
   #create dataframe displaying results only for epigenetic drugs of interest
   epiresults <- as.data.frame(z[ , (colnames(z) %in% epidrugs)])
   
-  #create object of dataframe displaying test results for all drugs, and dataframe of results only for epigenetic drugs
+  #create object (list) containing a dataframe displaying test results for all drugs, and a dataframe of test results only for epigenetic drugs
   res = list(results, epiresults)
   
   #return the object
@@ -45,6 +46,6 @@ compare <- function(dataset, label, level1, level2) {
   
 }
 
-#run above function and store results in "linkervscore" variable
+#runs above function and stores results in "linkervscore" variable
 linkervscore <- compare(Drugresponse_DepMapID_HistSubtype_SampleInfo, HistSubtype, "LinkerMut", "CoreMut")
 
