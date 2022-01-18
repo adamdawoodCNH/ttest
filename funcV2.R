@@ -41,7 +41,7 @@ compare <- function(dataset, label, level1, level2) {
   dir.create(file.path("results", paste(sep = "", label, "-", level1, "vs", level2 )), showWarnings = FALSE)
   
   #load in drug annotation file
-  info <- read_csv("primary-screen-replicate-treatment-info_DrugIDs.csv")
+  info <- read.csv("primary-screen-replicate-treatment-info_DrugIDs.csv")
   
   
   #create dataframe displaying results only for epigenetic drugs of interest
